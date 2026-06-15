@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://7350b5-netizen.github.io/sitemap.xml
