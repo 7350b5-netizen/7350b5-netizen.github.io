@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Ray Image Studio Mark</title>
+  <desc id="desc">Square brand mark for Ray Image Studio, suitable for Google Business Profile and social media.</desc>
+  <defs>
+    <style>
+      .bg { fill: #17231f; }
+      .line { fill: none; stroke: #d7d1c4; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+      .thin { fill: none; stroke: #b46f44; stroke-width: 7; stroke-linecap: round; }
+      .text { fill: #f7f7f2; font-family: "Optima", "Trajan Pro", "Times New Roman", serif; font-size: 42px; letter-spacing: 10px; }
+      .sub { fill: #d7d1c4; font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif; font-size: 25px; letter-spacing: 5px; }
+    </style>
+  </defs>
+  <rect class="bg" width="512" height="512" rx="48"/>
+  <g transform="translate(112 70)">
+    <circle class="line" cx="144" cy="144" r="118"/>
+    <path class="line" d="M80 72h128M80 216h128M72 80v128M216 80v128"/>
+    <path class="thin" d="M144 36v216M36 144h216"/>
+    <circle cx="144" cy="144" r="20" fill="#b46f44"/>
+  </g>
+  <text class="text" x="256" y="382" text-anchor="middle">RAY</text>
+  <text class="sub" x="256" y="430" text-anchor="middle">叡影攝影工作室</text>
+</svg>

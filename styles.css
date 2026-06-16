@@ -78,15 +78,9 @@ textarea:focus-visible {
   letter-spacing: 0;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--forest);
-  color: #fff;
-  font-size: 12px;
+.brand-logo {
+  width: clamp(156px, 18vw, 196px);
+  height: auto;
 }
 
 .site-nav {
