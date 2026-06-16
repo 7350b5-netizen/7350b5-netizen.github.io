@@ -79,7 +79,7 @@ textarea:focus-visible {
 }
 
 .brand-logo {
-  width: clamp(156px, 18vw, 196px);
+  width: clamp(220px, 24vw, 320px);
   height: auto;
 }
 
@@ -705,6 +705,10 @@ textarea {
 }
 
 @media (max-width: 560px) {
+  .brand-logo {
+    width: min(250px, 78vw);
+  }
+
   .site-nav {
     flex-wrap: wrap;
     justify-content: flex-start;
