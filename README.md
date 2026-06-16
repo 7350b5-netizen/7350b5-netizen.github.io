@@ -1,4 +1,4 @@
-# 叡影攝影工作室｜RAY Image Photography Studio
+# 叡影攝影工作室｜Ray Image Studio
 
 花蓮旅宿、餐廳與商業空間攝影網站。
 
