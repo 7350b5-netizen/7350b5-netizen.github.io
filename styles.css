@@ -448,6 +448,25 @@ textarea {
   font-weight: 500;
 }
 
+.contact-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.contact-strip a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 10px 14px;
+  color: var(--forest);
+  background: #fbfbf8;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-weight: 800;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -459,6 +478,11 @@ textarea {
 
 .site-footer p {
   margin: 0;
+}
+
+.site-footer div {
+  display: grid;
+  gap: 6px;
 }
 
 .subhero {
