@@ -441,11 +441,52 @@ textarea {
   width: auto;
 }
 
+.form-honey {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .form-note {
   margin: -4px 0 0;
   color: var(--muted);
   font-size: 14px;
   font-weight: 500;
+}
+
+.thanks-main {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  padding: 132px clamp(22px, 6vw, 86px) 72px;
+}
+
+.thanks-panel {
+  max-width: 860px;
+}
+
+.thanks-panel h1 {
+  margin: 0 0 18px;
+  max-width: 720px;
+  font-size: clamp(42px, 7vw, 92px);
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.thanks-panel p {
+  max-width: 640px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: clamp(17px, 2vw, 22px);
+}
+
+.thanks-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .contact-strip {

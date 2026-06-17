@@ -12,7 +12,7 @@
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <link rel="stylesheet" href="styles.css?v=20260615-final">
+    <link rel="stylesheet" href="styles.css?v=20260617-form">
     <link rel="icon" href="assets/brand/ray-image-studio-mark.png" type="image/png">
     <script type="application/ld+json">
       {
@@ -244,22 +244,27 @@
           <p>請提供基本資訊，將依場域、用途與拍攝範圍整理合適的拍攝內容與報價。</p>
         </div>
 
-        <form class="inquiry-form" id="inquiry-form" action="mailto:hello@rayimagestudio.com" method="post" enctype="text/plain">
+        <form class="inquiry-form" id="inquiry-form" action="https://formsubmit.co/hello@rayimagestudio.com" method="post">
+          <input type="hidden" name="_subject" value="空間攝影拍攝詢價">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://rayimagestudio.com/thanks.html">
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="form-honey" aria-hidden="true">
           <label>
             姓名 / 單位
-            <input type="text" name="name" autocomplete="name" required>
+            <input type="text" name="姓名或單位" autocomplete="name" required>
           </label>
           <label>
             聯絡方式
-            <input type="text" name="contact" placeholder="電話、LINE 或 Email" autocomplete="email" required>
+            <input type="text" name="聯絡方式" placeholder="電話、LINE 或 Email" autocomplete="email" required>
           </label>
           <label>
             拍攝地點
-            <input type="text" name="location" placeholder="例如：花蓮市、吉安、壽豐、台東" required>
+            <input type="text" name="拍攝地點" placeholder="例如：花蓮市、吉安、壽豐、台東" required>
           </label>
           <label>
             空間類型
-            <select name="space-type">
+            <select name="空間類型">
               <option>民宿 / 飯店 / 旅宿</option>
               <option>餐廳 / 咖啡廳</option>
               <option>商業空間</option>
@@ -269,11 +274,11 @@
           </label>
           <label class="wide">
             預計拍攝區域
-            <textarea name="areas" rows="4" placeholder="例如：3 間房型、大廳、餐廳、外觀、空拍、餐點" required></textarea>
+            <textarea name="預計拍攝區域" rows="4" placeholder="例如：3 間房型、大廳、餐廳、外觀、空拍、餐點" required></textarea>
           </label>
           <label>
             使用用途
-            <select name="usage">
+            <select name="使用用途">
               <option>官網 / 訂房平台</option>
               <option>Google 商家 / 社群</option>
               <option>品牌官網 / 廣告</option>
@@ -283,16 +288,16 @@
           </label>
           <label>
             預計拍攝日期
-            <input type="text" name="date" placeholder="可填大約月份或日期">
+            <input type="text" name="預計拍攝日期" placeholder="可填大約月份或日期">
           </label>
           <label class="checks wide">
             加購需求
-            <span><input type="checkbox" name="aerial"> 空拍</span>
-            <span><input type="checkbox" name="video"> 短影片</span>
-            <span><input type="checkbox" name="rush"> 急件交付</span>
+            <span><input type="checkbox" name="加購需求[]" value="空拍"> 空拍</span>
+            <span><input type="checkbox" name="加購需求[]" value="短影片"> 短影片</span>
+            <span><input type="checkbox" name="加購需求[]" value="急件交付"> 急件交付</span>
           </label>
           <button class="button primary wide" type="submit">送出詢價</button>
-          <p class="form-note wide">送出後會開啟 Email 草稿，內容將自動整理拍攝需求；確認後寄出即可完成詢價。</p>
+          <p class="form-note wide">送出後會直接送達信箱，並顯示完成頁；第一次使用可能需要先完成信箱啟用確認。</p>
         </form>
         <div class="contact-strip" aria-label="聯絡資訊">
           <a href="tel:+886935119202">0935 119 202</a>
@@ -312,37 +317,5 @@
         <p>服務地區：花蓮、台東、宜蘭與東部地區</p>
       </div>
     </footer>
-    <script>
-      const inquiryForm = document.querySelector("#inquiry-form");
-      if (inquiryForm) {
-        inquiryForm.addEventListener("submit", (event) => {
-          event.preventDefault();
-          if (!inquiryForm.reportValidity()) return;
-
-          const data = new FormData(inquiryForm);
-          const addOns = ["aerial", "video", "rush"]
-            .filter((key) => data.get(key))
-            .map((key) => ({ aerial: "空拍", video: "短影片", rush: "急件交付" })[key]);
-
-          const body = [
-            "您好，我想詢問空間攝影服務：",
-            "",
-            `姓名 / 單位：${data.get("name") || ""}`,
-            `聯絡方式：${data.get("contact") || ""}`,
-            `拍攝地點：${data.get("location") || ""}`,
-            `空間類型：${data.get("space-type") || ""}`,
-            `預計拍攝區域：${data.get("areas") || ""}`,
-            `使用用途：${data.get("usage") || ""}`,
-            `預計拍攝日期：${data.get("date") || ""}`,
-            `加購需求：${addOns.length ? addOns.join("、") : "無"}`,
-            "",
-            "謝謝。"
-          ].join("\n");
-
-          const subject = encodeURIComponent("空間攝影拍攝詢價");
-          window.location.href = `mailto:hello@rayimagestudio.com?subject=${subject}&body=${encodeURIComponent(body)}`;
-        });
-      }
-    </script>
   </body>
 </html>
